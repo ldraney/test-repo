@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Exit on any error
-set -e
+# set -e
 
 # Check if commit message was provided
 if [ -z "$1" ]; then
