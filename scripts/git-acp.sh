@@ -12,7 +12,7 @@ fi
 
 commit_message="$1"
 
-# Configure Git silently
+# Configure Git silently (using same config as init script)
 git config --global --add safe.directory /workspace >/dev/null 2>&1
 git config --global init.defaultBranch main >/dev/null 2>&1
 git config --global user.email "$(gh api user | jq -r .email)" >/dev/null 2>&1
