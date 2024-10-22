@@ -1,13 +1,9 @@
-version: '3.8'
-
 services:
   gh:
     build: .
     volumes:
       - gh-config:/home/gh/.config/gh    # Persist GitHub CLI authentication
-      - ${PWD}:/workspace                # Mount current directory
       - ${PWD}/scripts:/scripts          # Mount scripts directory
-    working_dir: /workspace
     environment:
       - GH_TOKEN                         # Pass through GitHub token if set
     entrypoint: ["/bin/bash"]           # Set default entrypoint to bash
