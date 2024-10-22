@@ -11,7 +11,6 @@ git config --global init.defaultBranch main
 git config --global user.email "$(gh api user | jq -r .email)"
 git config --global user.name "$(gh api user | jq -r .name)"
 
-
 # Add all changes
 git add -A
 
